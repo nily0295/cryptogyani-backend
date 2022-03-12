@@ -1,0 +1,21 @@
+{
+  "name": "cryptogyani-backend",
+  "version": "1.0.0",
+  "description": "This is the Crypto Arbitrage webapp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "crypto",
+    "arbitrage"
+  ],
+  "author": "Nilesh Patil",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "crypto-js": "^4.1.1",
+    "node-fetch": "^2.6.1",
+    "ws": "^8.2.1"
+  }
+}
