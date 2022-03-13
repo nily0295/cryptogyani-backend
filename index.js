@@ -1,6 +1,6 @@
-const express = require("express");
+import express from "express";
+import { getExchange, getTickers } from './module.js';
 const app = express();
-const fetch = require("node-fetch");
 app.use(express.json());
 
 const port = 3000;
@@ -15,16 +15,16 @@ app.use(function (req, res, next) {
   next();
 });
 
-app.get("/tickers/:inr", async (req, res) => {
-  res.send(0);
+app.get("/tickers/", async (req, res) => {
+  res.send(await getTickers(res));
 });
 
-app.get("/exchange", async (req, res) => {
+app.get("/exchange/", async (req, res) => {
   res.send(await getExchange());
 });
 
 app.get("/", (req, res) => {
-  res.send("hi");
+  res.send("WELLCOME TO THE CRYPTOGYANI ARBITRAGE EXPRESS WEBAPP");
 });
 
 app.listen(port, () => {
